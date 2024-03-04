@@ -22,7 +22,15 @@ public class MensService {
     }
 
     public void createMen(int id) throws NoIdException {
-        menRepository.save(scrapingService.scrapeMen(id));
+        Optional<Men> optionalMen = menRepository.findById(id); // getting an optional of mens
+        if (optionalMen.isPresent()) {
+            Men men = optionalMen.get();
+            men.setCommentsCount(scrapingService.scrapeComments(id)); // updating comments count
+
+            menRepository.save(men);
+        } else {
+            menRepository.save(scrapingService.scrapeMen(id)); // saving mens
+        }
     }
 
     public List<Men> findAllMensByPageAndSize(Pageable pageable) {

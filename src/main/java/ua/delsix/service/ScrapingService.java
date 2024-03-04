@@ -47,6 +47,20 @@ public class ScrapingService {
         }
     }
 
+    public int scrapeComments(int id) throws NoIdException {
+        try {
+            Document doc = Jsoup.connect(String.format(MEN_URL, id)).userAgent(AGENT).get();
+            return getCommentsCount(doc.select("table"));
+        } catch (IOException e) {
+            if (e instanceof org.jsoup.HttpStatusException httpStatusException) {
+                log.error("HTTP Status Code: {}", httpStatusException.getStatusCode());
+                log.error("Error Message: {}", httpStatusException.getMessage());
+            }
+
+            throw new NoIdException(e);
+        }
+    }
+
     private static LocalDate getSignedUpDate(Elements tables) {
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern(tables.select("span").first().attr("data-time-format"));
         return LocalDate.parse(
