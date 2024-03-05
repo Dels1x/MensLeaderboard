@@ -23,7 +23,7 @@ public class MensController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Men>> getMensByPage(@RequestParam(defaultValue = "0") int page,
-                                   @RequestParam(defaultValue = "30") int size) {
+                                   @RequestParam(defaultValue = "50") int size) {
         return ResponseEntity.ok().body(mensService.findAllMensByPageAndSize(
                 PageRequest.of(page,
                         size,
@@ -33,6 +33,11 @@ public class MensController {
     @GetMapping("/ids")
     public ResponseEntity<List<Long>> getAllIds() {
         return ResponseEntity.ok().body(mensService.findAllIds());
+    }
+
+    @GetMapping("/pagesAmount")
+    public ResponseEntity<Integer> getPagesAmount(@RequestParam(defaultValue = "50") int size) {
+        return ResponseEntity.ok().body(mensService.getPagesAmount(size));
     }
 
     @GetMapping("/get")

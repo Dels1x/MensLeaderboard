@@ -1,8 +1,12 @@
 'use strict'
 
-export async function getAllMens() {
-    const link = "http://localhost:8080/mens/all";
+export async function getAllMens(page = 0) {
+    const link = `http://localhost:8080/mens/all?page=${page}&size=30`;
+    return await executeGet(link);
+}
 
+export async function getPagesAmount() {
+    const link = "http://localhost:8080/mens/pagesAmount?size=30";
     return await executeGet(link);
 }
 
@@ -15,13 +19,12 @@ export async function getAllIds() {
 
 export async function getMenData(id) {
     const link = `http://localhost:8080/mens/get?id=${id}`
-
+    await createMen(id); // updating men
     return await executeGet(link);
 }
 
-export async function createMen(id) {
+export async function createMen(id) { // also updates mens
     const link = `http://localhost:8080/mens/new?id=${id}`
-    console.log("i'm here");
     await executePost(link);
 }
 

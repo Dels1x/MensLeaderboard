@@ -1,5 +1,17 @@
 .men {
-    background: #2D3844;
-    padding: 0.2rem;
-    border: #1B1F23 solid 1px;
+    padding: 0.5rem 2.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .men {
+        background: #2D3844;
+        border: #1B1F23 solid 1px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .men {
+        background: #FFFFFF;
+        border: #E5E7EA solid 1px;
+    }
 }

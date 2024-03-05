@@ -3,13 +3,16 @@
 import Head from "next/head";
 import React, {useState} from "react";
 import {Button, TextField} from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from "next/link";
-import {createMen} from "@/pages/api/api";
+import {createMen} from "@/api/api";
 
 const name = "mens)) leaderboard"
 
 export default function Layout({children}) {
     const [textFieldContent, setTextFieldContent] = useState('');
+    const prefersDarkTheme = useMediaQuery('(prefers-color-scheme: dark)');
+    const textColor = prefersDarkTheme ? 'white' : 'black';
 
     const submitMen = async () => {
         if (/^\d+$/.test(textFieldContent)) {
@@ -32,9 +35,13 @@ export default function Layout({children}) {
                 variant="standard"
                 value={textFieldContent}
                 onChange={(e) => setTextFieldContent(e.target.value)}
-                InputProps={{ style: { color: 'white' } }}/>
+                InputProps={{ style:  { color: textColor } }}/>
             <Button variant="outlined" onClick={submitMen}>Submit</Button>
         </nav>
-        <main>{children}</main>
+        <main id="mainContentParent">
+            <div id="mainContent">
+                {children}
+            </div>
+        </main>
     </div>
 }

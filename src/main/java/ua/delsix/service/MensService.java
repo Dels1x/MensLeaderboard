@@ -24,19 +24,33 @@ public class MensService {
     }
 
     public void createMen(int id) throws NoIdException {
+        log.info("New request to create or update a men with id of {}", id);
+
         Optional<Men> optionalMen = menRepository.findById(id); // getting an optional of mens
         if (optionalMen.isPresent()) {
             Men men = optionalMen.get();
 
             // check if at least 4 hours passed since last update, if so - update comments count
             if (Duration.between(men.getLastUpdatedAt(), Instant.now()).toHours() >= 4) {
-                men.setCommentsCount(scrapingService.scrapeComments(id));
-
-                menRepository.save(men);
+                updateCommentsCount(men, id);
             }
         } else {
-            menRepository.save(scrapingService.scrapeMen(id)); // saving mens
+            saveMen(id); // saving mens
         }
+    }
+
+    private void saveMen(int id) throws NoIdException {
+        Men men = scrapingService.scrapeMen(id);
+        menRepository.save(men);
+        log.info("new men {} has been created", men.getName());
+    }
+
+    private void updateCommentsCount(Men men, int id) throws NoIdException {
+        men.setCommentsCount(scrapingService.scrapeComments(id));
+        men.setLastUpdatedAt(Instant.now());
+
+        menRepository.save(men);
+        log.info("{}'s comments count has been updated", men.getName());
     }
 
     public List<Men> findAllMensByPageAndSize(Pageable pageable) {
@@ -55,5 +69,9 @@ public class MensService {
         } else {
             throw new NoIdException();
         }
+    }
+
+    public int getPagesAmount(int size) {
+        return (int) Math.ceil((double) menRepository.count() / size);
     }
 }
