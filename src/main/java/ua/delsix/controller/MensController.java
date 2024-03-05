@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController()
 @RequestMapping("/mens")
+@CrossOrigin(origins = {"http://localhost:3000"})
 public class MensController {
     private final MensService mensService;
 
@@ -27,6 +28,11 @@ public class MensController {
                 PageRequest.of(page,
                         size,
                         Sort.by("commentsCount").descending())));
+    }
+
+    @GetMapping("/ids")
+    public ResponseEntity<List<Long>> getAllIds() {
+        return ResponseEntity.ok().body(mensService.findAllIds());
     }
 
     @GetMapping("/get")

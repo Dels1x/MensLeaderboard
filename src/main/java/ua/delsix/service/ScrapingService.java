@@ -9,6 +9,7 @@ import ua.delsix.exception.NoIdException;
 import ua.delsix.jpa.entity.Men;
 
 import java.io.IOException;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -24,27 +25,34 @@ public class ScrapingService {
             Document doc = Jsoup.connect(String.format(MEN_URL, id)).userAgent(AGENT).get();
             Elements tables = doc.select("table");
 
-            String name = getName(doc);
-            String country = getCountryName(tables);
-            int commentsCount = getCommentsCount(tables);
-            LocalDate signedUp = getSignedUpDate(tables);
-
-            return Men.builder()
-                    .rating(0F).ratedTimes(0)
-                    .commentsCount(commentsCount)
-                    .id(id)
-                    .name(name)
-                    .signedUp(signedUp)
-                    .country(country)
-                    .build();
+            return buildMen(id,
+                    getName(doc),
+                    getCountryName(tables),
+                    getCommentsCount(tables),
+                    getSignedUpDate(tables));
         } catch (IOException e) {
-            if (e instanceof org.jsoup.HttpStatusException httpStatusException) {
-                log.error("HTTP Status Code: {}", httpStatusException.getStatusCode());
-                log.error("Error Message: {}", httpStatusException.getMessage());
-            }
-
+            handleScrapingError(e);
             throw new NoIdException(e);
         }
+    }
+
+    private static void handleScrapingError(IOException e) {
+        if (e instanceof org.jsoup.HttpStatusException httpStatusException) {
+            log.error("HTTP Status Code: {}", httpStatusException.getStatusCode());
+            log.error("Error Message: {}", httpStatusException.getMessage());
+        }
+    }
+
+    private static Men buildMen(int id, String name, String country, int commentsCount, LocalDate signedUp) {
+        return Men.builder()
+                .rating(0F).ratedTimes(0)
+                .commentsCount(commentsCount)
+                .id(id)
+                .name(name)
+                .signedUp(signedUp)
+                .country(country)
+                .lastUpdatedAt(Instant.now())
+                .build();
     }
 
     public int scrapeComments(int id) throws NoIdException {

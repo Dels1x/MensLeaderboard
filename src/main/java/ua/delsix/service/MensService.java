@@ -7,6 +7,8 @@ import ua.delsix.exception.NoIdException;
 import ua.delsix.jpa.entity.Men;
 import ua.delsix.jpa.repo.MenRepository;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,9 +27,13 @@ public class MensService {
         Optional<Men> optionalMen = menRepository.findById(id); // getting an optional of mens
         if (optionalMen.isPresent()) {
             Men men = optionalMen.get();
-            men.setCommentsCount(scrapingService.scrapeComments(id)); // updating comments count
 
-            menRepository.save(men);
+            // check if at least 4 hours passed since last update, if so - update comments count
+            if (Duration.between(men.getLastUpdatedAt(), Instant.now()).toHours() >= 4) {
+                men.setCommentsCount(scrapingService.scrapeComments(id));
+
+                menRepository.save(men);
+            }
         } else {
             menRepository.save(scrapingService.scrapeMen(id)); // saving mens
         }
@@ -35,6 +41,10 @@ public class MensService {
 
     public List<Men> findAllMensByPageAndSize(Pageable pageable) {
         return menRepository.findAllByOrderByCommentsCountDesc(pageable);
+    }
+
+    public List<Long> findAllIds() {
+        return menRepository.findAllIds();
     }
 
     public Men findById(int id) throws NoIdException {

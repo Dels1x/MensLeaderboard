@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 
+import java.time.Instant;
 import java.time.LocalDate;
 
 @ToString
@@ -38,4 +39,8 @@ public class Men {
 
     @Column(name = "signed_up", nullable = false)
     private LocalDate signedUp;
+
+    @Column(name = "last_updated_at", nullable = false)
+    private Instant lastUpdatedAt;
+
 }
