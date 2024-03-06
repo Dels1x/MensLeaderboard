@@ -50,7 +50,7 @@ public class ScrapingService {
                 .id(id)
                 .name(name)
                 .signedUp(signedUp)
-                .country(country)
+                .countryCode(country)
                 .lastUpdatedAt(Instant.now())
                 .build();
     }
@@ -81,7 +81,8 @@ public class ScrapingService {
     }
 
     private static String getCountryName(Elements tables) {
-        return tables.get(0).select("img").first().attr("alt");
+        String imgSrc = tables.get(0).select("img").first().attr("src");
+        return imgSrc.substring(imgSrc.length() - 6, imgSrc.length() - 4);
     }
 
     private String getName(Document doc) {

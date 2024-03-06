@@ -1,0 +1,21 @@
+.mainData {
+    display: flex;
+    font-size: 2rem;
+}
+
+.mainData div {
+    margin-right: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .profile {
+        background: #2d3844;
+        padding: 52px 20px;
+    }
+}
+
+#paginationBlock {
+    background: #2d3844;
+    height: 80px;
+    padding: 50px;
+}

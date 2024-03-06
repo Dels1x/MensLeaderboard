@@ -34,8 +34,8 @@ public class Men {
     @Column(name = "rated_times", nullable = false)
     private Integer ratedTimes;
 
-    @Column(name = "country", nullable = false, length = 56)
-    private String country;
+    @Column(name = "country_code", nullable = false, length = 2)
+    private String countryCode;
 
     @Column(name = "signed_up", nullable = false)
     private LocalDate signedUp;
