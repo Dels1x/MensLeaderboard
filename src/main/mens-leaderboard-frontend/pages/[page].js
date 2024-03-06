@@ -4,13 +4,31 @@ import Layout from "@/layout/layout";
 import styles from "../styles/Home.module.css";
 import {getAllMens, getPagesAmount} from "@/api/api";
 import Link from "next/link";
+import {Button} from "@mui/material";
+import {useRouter} from "next/router";
 
-export default function Home({allMens}) {
+export default function Home({allMens, currentPage, pagesAmount}) {
+    const router = useRouter();
+
+    const prevPage = async () => {
+        if (currentPage > 0) {
+            await router.replace(`/${parseInt(currentPage) - 1}`);
+        }
+    };
+    const nextPage = async () => {
+        if (currentPage < pagesAmount - 1) {
+            await router.replace(`/${parseInt(currentPage) + 1}`);
+        }
+    };
+
     return (
         <Layout>
             <div id="paginationBlock">
                 <div><h2>leaderboard of mens))</h2></div>
-                <div></div>
+                <div>
+                    <Button onClick={prevPage}>Prev</Button>
+                    <Button onClick={nextPage}>Next</Button>
+                </div>
             </div>
             {allMens && allMens.length > 0 ? (
                 <div>
@@ -30,14 +48,14 @@ export default function Home({allMens}) {
 }
 
 export async function getStaticPaths() {
-    const pagesAmount = getPagesAmount();
+    const pagesAmount = await getPagesAmount();
     let paths = [];
 
     for (let i = 0; i < pagesAmount; i++) {
         paths.push(
             {
                 params: {
-                    page: i
+                    page: i.toString()
                 }
             }
         )
@@ -54,7 +72,9 @@ export async function getStaticProps({params}) {
 
     return {
         props: {
-            allMens
+            allMens,
+            currentPage: params.page.toString(),
+            pagesAmount: await getPagesAmount()
         },
         revalidate: 60
     }

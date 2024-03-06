@@ -6,10 +6,12 @@ import {Button, TextField} from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from "next/link";
 import {createMen} from "@/api/api";
+import {useRouter} from "next/router";
 
 const name = "mens)) leaderboard"
 
 export default function Layout({children}) {
+    const router = useRouter();
     const [textFieldContent, setTextFieldContent] = useState('');
     const prefersDarkTheme = useMediaQuery('(prefers-color-scheme: dark)');
     const textColor = prefersDarkTheme ? 'white' : 'black';
@@ -17,9 +19,9 @@ export default function Layout({children}) {
     const submitMen = async () => {
         if (/^\d+$/.test(textFieldContent)) {
             await createMen(textFieldContent);
-            window.location.href = `/mens/${textFieldContent}`;
+            await router.push(`/mens/${textFieldContent}`);
         }
-    }
+    };
 
     return <div>
         <Head>

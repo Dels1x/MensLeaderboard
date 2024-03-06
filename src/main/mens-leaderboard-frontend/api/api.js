@@ -1,12 +1,14 @@
 'use strict'
 
+const size = 5;
+
 export async function getAllMens(page = 0) {
-    const link = `http://localhost:8080/mens/all?page=${page}&size=30`;
+    const link = `http://localhost:8080/mens/all?page=${page}&size=${size}`;
     return await executeGet(link);
 }
 
 export async function getPagesAmount() {
-    const link = "http://localhost:8080/mens/pagesAmount?size=30";
+    const link = `http://localhost:8080/mens/pagesAmount?size=${size}`;
     return await executeGet(link);
 }
 

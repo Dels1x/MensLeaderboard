@@ -73,7 +73,7 @@ a {
     }
 }
 
-@media all and (max-device-width: 480px) {
+@media all and (max-device-width: 720px) {
     #mainContent {
         width: 100%;
     }
