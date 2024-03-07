@@ -40,7 +40,6 @@ export async function createMen(id) { // also updates mens
 }
 
 async function executeGet(link) {
-    console.log("link: " + link);
     const res = await fetch(
         link,
         {
@@ -55,7 +54,7 @@ async function executeGet(link) {
     }
 
     try {
-        return await res.text();
+        return await res.json();
     } catch (error) {
         console.error("Error parsing JSON:", error.message);
     }
