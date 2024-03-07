@@ -8,6 +8,7 @@ import ua.delsix.jpa.entity.Men;
 import java.util.List;
 
 public interface MenRepository extends JpaRepository<Men, Integer> {
+    List<Men> findAllByOrderByCommentsCountDesc();
     List<Men> findAllByOrderByCommentsCountDesc(Pageable pageable);
     @Query("SELECT m.id FROM Men m")
     List<Long> findAllIds();

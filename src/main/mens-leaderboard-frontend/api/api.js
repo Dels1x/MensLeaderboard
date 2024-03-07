@@ -11,6 +11,11 @@ export async function getAllMens(page = 0) {
     return await executeGet(link);
 }
 
+export async function getMenPosition(id) {
+    const link = `http://localhost:8080/mens/pos?id=${id}`;
+    return await executeGet(link);
+}
+
 export async function getPagesAmount() {
     const link = `http://localhost:8080/mens/pagesAmount?size=${size}`;
     return await executeGet(link);

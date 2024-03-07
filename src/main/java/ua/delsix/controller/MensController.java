@@ -30,6 +30,11 @@ public class MensController {
                         Sort.by("commentsCount").descending())));
     }
 
+    @GetMapping("/pos")
+    public ResponseEntity<Integer> getPosition(@RequestParam int id) {
+        return ResponseEntity.ok().body(mensService.findPosition(id));
+    }
+
     @GetMapping("/ids")
     public ResponseEntity<List<Long>> getAllIds() {
         return ResponseEntity.ok().body(mensService.findAllIds());

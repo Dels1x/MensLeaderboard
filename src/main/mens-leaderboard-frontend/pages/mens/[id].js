@@ -1,18 +1,19 @@
 "use strict"
 'use client'
 
-import {getAllIds, getMenData} from "@/api/api";
+import {getAllIds, getMenData, getMenPosition} from "@/api/api";
 import Layout from "@/layout/layout";
 import Image from "next/image";
 import styles from "@/styles/Men.module.css";
 import {hasFlag} from "country-flag-icons";
 
-export default function Men({menData}) {
+export default function Men({menData, position}) {
     const isFlag = hasFlag(menData.countryCode);
 
     return <Layout>
         <section className={styles.profile}>
             <div className={styles.mainData}>
+                #{position}
                 {isFlag ? (
                     <div>
                         <Image
@@ -36,7 +37,7 @@ export default function Men({menData}) {
                     - {menData.commentsCount} comments
                 </div>
             </div>
-            <div>{menData.id}, {menData.signedUp}, {menData.country}</div>
+            <div>ID: {menData.id}, Signed up at: {menData.signedUp}</div>
         </section>
     </Layout>
 }
@@ -52,6 +53,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     const menData = await getMenData(params.id);
+    const position = await getMenPosition(params.id)
 
     if (!menData) {
         return {
@@ -62,6 +64,7 @@ export async function getStaticProps({params}) {
     return {
         props: {
             menData,
+            position
         },
     };
 }

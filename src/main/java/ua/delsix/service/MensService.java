@@ -74,4 +74,17 @@ public class MensService {
     public int getPagesAmount(int size) {
         return (int) Math.ceil((double) menRepository.count() / size);
     }
+
+    public int findPosition(int targetUserId) {
+        List<Men> mens = menRepository.findAllByOrderByCommentsCountDesc();
+
+        // linear search, because mens are sorted by comments, not id
+        for (int i = 0; i < mens.size(); i++) {
+            if (mens.get(i).getId() == targetUserId) {
+                return i + 1;
+            }
+        }
+
+        return -1;
+    }
 }

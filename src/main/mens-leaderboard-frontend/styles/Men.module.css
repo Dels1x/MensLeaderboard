@@ -13,3 +13,10 @@
         padding: 52px 20px;
     }
 }
+
+@media (prefers-color-scheme: light) {
+    .profile {
+        background: #2d3844;
+        padding: 52px 20px;
+    }
+}
