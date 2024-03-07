@@ -7,6 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from "next/link";
 import {createMen} from "@/api/api";
 import {useRouter} from "next/router";
+import Image from "next/image";
 
 const name = "mens)) leaderboard"
 
@@ -23,22 +24,45 @@ export default function Layout({children}) {
         }
     };
 
+    const handleUserInput = (e) => {
+        const regex = /^[0-9\b]+$/;
+        if (e.target.value === "" || regex.test(e.target.value)) {
+            setTextFieldContent(e.target.value);
+        }
+    };
+
     return <div>
         <Head>
             <title>{name}</title>
+            <link rel="icon" href="/logo.ico"/>
             <meta
                 name="description"
                 content="The very bestest mens)) leaderboard"
             />
         </Head>
         <nav>
-            <Link href="/"><Button variant="outlined">HLTV</Button></Link>
-            <TextField
-                variant="standard"
-                value={textFieldContent}
-                onChange={(e) => setTextFieldContent(e.target.value)}
-                InputProps={{ style:  { color: textColor } }}/>
-            <Button variant="outlined" onClick={submitMen}>Submit</Button>
+            <div id="leftSide">
+                <div>
+                    <Link href="/">
+                        <Image
+                            src="/logo.png"
+                            width="50"
+                            height="50"
+                            alt="HLTV"/>
+                    </Link>
+                </div>
+            </div>
+            <div id="rightSide">
+                <TextField
+                           focused
+                           id="standard-basic"
+                           label="Enter mens' ID"
+                           variant="standard"
+                           value={textFieldContent}
+                           onChange={(e) => handleUserInput(e)}
+                           InputProps={{style: {color: textColor}}}/>
+                <Button variant="outlined" onClick={submitMen}>Submit</Button>
+            </div>
         </nav>
         <main id="mainContentParent">
             <div id="mainContent">

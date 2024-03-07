@@ -2,12 +2,14 @@
 
 import Layout from "@/layout/layout";
 import styles from "../styles/Home.module.css";
-import {getAllMens, getPagesAmount} from "@/api/api";
+import {getAllMens, getPagesAmount, getSize} from "@/api/api";
 import Link from "next/link";
 import {Button} from "@mui/material";
 import {useRouter} from "next/router";
+import Image from "next/image";
+import {hasFlag} from "country-flag-icons";
 
-export default function Home({allMens, currentPage, pagesAmount}) {
+export default function Home({allMens, currentPage, pagesAmount, startingIndex}) {
     const router = useRouter();
 
     const prevPage = async () => {
@@ -32,9 +34,16 @@ export default function Home({allMens, currentPage, pagesAmount}) {
             </div>
             {allMens && allMens.length > 0 ? (
                 <div>
-                    {allMens.map((men) => (
+                    {allMens.map((men, index) => (
                         <section key={men.id} className={styles.men}>
                             <h2>
+                                #{index + startingIndex}&nbsp;
+                                {hasFlag(men.countryCode) ?
+                                    <Image src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${men.countryCode}.svg`}
+                                           alt={men.countryCode}
+                                           width={60} height={30} />
+                                    : ""
+                                }
                                 <Link href={`/mens/${men.id}`}>{men.name}</Link> - {men.commentsCount}
                             </h2>
                         </section>
@@ -74,7 +83,8 @@ export async function getStaticProps({params}) {
         props: {
             allMens,
             currentPage: params.page.toString(),
-            pagesAmount: await getPagesAmount()
+            pagesAmount: await getPagesAmount(),
+            startingIndex: parseInt(params.page) * getSize() + 1
         },
         revalidate: 60
     }

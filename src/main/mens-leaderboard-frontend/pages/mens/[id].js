@@ -18,8 +18,7 @@ export default function Men({menData}) {
                         <Image
                             src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${menData.countryCode}.svg`}
                             alt={menData.countryCode}
-                            width="70"
-                            height="35"
+                            width="70" height="35"
                         />
                     </div>
                 ) : (
@@ -44,7 +43,6 @@ export default function Men({menData}) {
 
 export async function getStaticPaths() {
     const paths = await getAllIds();
-    console.log(paths);
 
     return {
         paths,
@@ -54,7 +52,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     const menData = await getMenData(params.id);
-    console.log("menData: " + JSON.stringify(menData));
 
     if (!menData) {
         return {

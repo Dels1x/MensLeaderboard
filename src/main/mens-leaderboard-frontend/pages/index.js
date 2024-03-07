@@ -6,6 +6,8 @@ import {getAllMens, getPagesAmount} from "@/api/api";
 import {useRouter} from 'next/router';
 import Link from "next/link";
 import {Button} from "@mui/material";
+import {hasFlag} from "country-flag-icons";
+import Image from "next/image";
 
 export default function Home({allMens}) {
     const router = useRouter();
@@ -30,9 +32,16 @@ export default function Home({allMens}) {
 
             {allMens && allMens.length > 0 ? (
                 <div>
-                    {allMens.map((men) => (
+                    {allMens.map((men, index) => (
                         <section key={men.id} className={styles.men}>
                             <h2>
+                                #{index + 1}&nbsp;
+                                {hasFlag(men.countryCode) ?
+                                    <Image src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${men.countryCode}.svg`}
+                                           alt={men.countryCode}
+                                           width={60} height={30} />
+                                    : ""
+                                }
                                 <Link href={`/mens/${men.id}`}>{men.name}</Link> - {men.commentsCount}
                             </h2>
                         </section>

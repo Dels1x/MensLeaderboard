@@ -1,3 +1,8 @@
+body {
+    background-image: url('/bg.jpg');
+    background-repeat: repeat;
+}
+
 #mainContentParent {
     justify-content: center;
     display: flex;
@@ -5,7 +10,7 @@
 
 #mainContent {
     width: 40%;
-    margin-top: 56px;
+    margin-top: 65px;
 }
 
 nav {
@@ -17,13 +22,29 @@ nav {
     top: 0;
     z-index: 101;
     box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
-    height: 55px;
+    height: 64px;
     padding-bottom: 0.6rem;
     padding-top: 0.6rem;
 }
 
+#leftSide {
+    margin-right: auto;
+    margin-left: 10px;
+
+}
+
+#rightSide {
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+#rightSide button {
+    margin-left: 16px;
+}
+
+
 a:hover {
-    color: #A3EDFF;
+    color: #DADADA;
     transition: 150ms;
 }
 
@@ -88,5 +109,14 @@ a {
 
 #paginationBlock {
     background: #2d3844;
-    height: 80px;
+    height: 90px;
+    padding: 1.2rem 2.5rem;
+    border: #1B1F23 solid 1px;
+}
+
+#paginationBlock button {
+    height: 25px;
+    width: 25px;
+    font-size: 17px;
+    margin-top: 8px;
 }

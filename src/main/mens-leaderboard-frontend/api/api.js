@@ -1,6 +1,10 @@
 'use strict'
 
-const size = 30;
+const size = 20;
+
+export function getSize() {
+    return size;
+}
 
 export async function getAllMens(page = 0) {
     const link = `http://localhost:8080/mens/all?page=${page}&size=${size}`;
@@ -55,13 +59,6 @@ async function executePost(link) {
 
     if (!res.ok) {
         console.error("Response is not okay");
-        return null;
-    }
-
-    try {
-        return await res.json()
-    } catch (error) {
-        console.error("Error parsing JSON:", error.message);
         return null;
     }
 }
