@@ -35,6 +35,9 @@ export default function Layout({children}) {
         <Head>
             <title>{name}</title>
             <link rel="icon" href="/logo.ico"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"/>
             <meta
                 name="description"
                 content="The very bestest mens)) leaderboard"
@@ -54,13 +57,13 @@ export default function Layout({children}) {
             </div>
             <div id="rightSide">
                 <TextField
-                           focused
-                           id="standard-basic"
-                           label="Enter mens' ID"
-                           variant="standard"
-                           value={textFieldContent}
-                           onChange={(e) => handleUserInput(e)}
-                           InputProps={{style: {color: textColor}}}/>
+                    focused
+                    id="standard-basic"
+                    label="Enter mens' ID"
+                    variant="standard"
+                    value={textFieldContent}
+                    onChange={(e) => handleUserInput(e)}
+                    InputProps={{style: {color: textColor}}}/>
                 <Button variant="outlined" onClick={submitMen}>Submit</Button>
             </div>
         </nav>
