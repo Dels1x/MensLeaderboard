@@ -14,6 +14,9 @@ export default function Home({allMens}) {
 
     const nextPage = async () => {
         const pagesAmount = await getPagesAmount();
+        console.log(pagesAmount);
+        console.log(parseInt(pagesAmount));
+        console.log(typeof pagesAmount)
 
         if (pagesAmount > 1) {
             await router.replace("/1");

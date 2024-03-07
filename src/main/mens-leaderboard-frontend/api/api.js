@@ -40,7 +40,14 @@ export async function createMen(id) { // also updates mens
 }
 
 async function executeGet(link) {
-    const res = await fetch(link);
+    console.log("link: " + link);
+    const res = await fetch(
+        link,
+        {
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "69420",
+            })
+        });
 
     if (!res.ok) {
         console.error("Response is not okay");
@@ -48,10 +55,9 @@ async function executeGet(link) {
     }
 
     try {
-        return await res.json()
+        return await res.text();
     } catch (error) {
         console.error("Error parsing JSON:", error.message);
-        return null;
     }
 }
 
@@ -59,7 +65,10 @@ async function executePost(link) {
     const res = await fetch(
         link,
         {
-            method: "POST"
+            method: "POST",
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "69420",
+            })
         });
 
     if (!res.ok) {
