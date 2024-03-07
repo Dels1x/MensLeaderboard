@@ -37,7 +37,7 @@ export default function Men({menData, position}) {
                     - {menData.commentsCount} comments
                 </div>
             </div>
-            <div>ID: {menData.id}, Signed up at: {menData.signedUp}</div>
+            <div className={styles.secondaryData}>ID: {menData.id}, Signed up at: {menData.signedUp}</div>
         </section>
     </Layout>
 }
