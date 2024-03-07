@@ -7,35 +7,35 @@ export function getSize() {
 }
 
 export async function getAllMens(page = 0) {
-    const link = `http://localhost:8080/mens/all?page=${page}&size=${size}`;
+    const link = `http://probably-eternal-skylark.ngrok-free.app/mens/all?page=${page}&size=${size}`;
     return await executeGet(link);
 }
 
 export async function getMenPosition(id) {
-    const link = `http://localhost:8080/mens/pos?id=${id}`;
+    const link = `http://probably-eternal-skylark.ngrok-free.app/mens/pos?id=${id}`;
     return await executeGet(link);
 }
 
 export async function getPagesAmount() {
-    const link = `http://localhost:8080/mens/pagesAmount?size=${size}`;
+    const link = `http://probably-eternal-skylark.ngrok-free.app/mens/pagesAmount?size=${size}`;
     return await executeGet(link);
 }
 
 export async function getAllIds() {
-    const link = "http://localhost:8080/mens/ids";
+    const link = "http://probably-eternal-skylark.ngrok-free.app/mens/ids";
 
     const ids = await executeGet(link);
     return ids.map(id => ({params: {"id": id.toString()}})); // map ids to the correct format and return
 }
 
 export async function getMenData(id) {
-    const link = `http://localhost:8080/mens/get?id=${id}`
+    const link = `http://probably-eternal-skylark.ngrok-free.app/mens/get?id=${id}`
     await createMen(id); // updating men
     return await executeGet(link);
 }
 
 export async function createMen(id) { // also updates mens
-    const link = `http://localhost:8080/mens/new?id=${id}`
+    const link = `http://probably-eternal-skylark.ngrok-free.app/mens/new?id=${id}`
     await executePost(link);
 }
 
