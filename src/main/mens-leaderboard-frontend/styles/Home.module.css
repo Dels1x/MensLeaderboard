@@ -2,6 +2,12 @@
     padding: 0.5rem 2.5rem;
 }
 
+@media all and (max-device-width: 600px) {
+    .men {
+        padding: 0.5rem 12px;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     .men {
         background: #2D3844;
