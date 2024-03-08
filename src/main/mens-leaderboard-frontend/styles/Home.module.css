@@ -3,6 +3,10 @@
     border-radius: 12px;
 }
 
+.currentPage {
+    font-size: 1.5rem;
+}
+
 @media all and (max-device-width: 600px) {
     .men {
         padding: 0.5rem 12px;

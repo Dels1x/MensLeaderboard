@@ -27,8 +27,9 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
         <Layout>
             <div className="paginationBlock">
                 <div><h2>leaderboard of mens))</h2></div>
-                <div>
-                    <Button onClick={prevPage}>Prev</Button>
+                <div className="pagination">
+                    <Button onClick={prevPage}>Prev</Button>&nbsp;
+                    <div className={styles.currentPage}>{parseInt(currentPage) + 1}</div>&nbsp;
                     <Button onClick={nextPage}>Next</Button>
                 </div>
             </div>
@@ -53,8 +54,9 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
                 <p>No data available</p>
             )}
             <div className="paginationBlock">
-                <div>
-                    <Button onClick={prevPage}>Prev</Button>
+                <div className="pagination">
+                    <Button onClick={prevPage}>Prev</Button>&nbsp;
+                    <div className={styles.currentPage}>{parseInt(currentPage) + 1}</div>&nbsp;
                     <Button onClick={nextPage}>Next</Button>
                 </div>
             </div>

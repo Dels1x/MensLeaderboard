@@ -140,14 +140,20 @@ a {
         border: #1B1F23 solid 1px;
     }
 
+    .pagination {
+        margin-top: 15px;
+        display: flex;
+        font-size: 20px;
+    }
+
+    & button {
+        margin-top: 2px;
+        height: 25px;
+        width: 25px;
+        font-size: 20px;
+    }
+
     height: 90px;
     padding: 0.5rem 2.5rem;
     border-radius: 12px;
-}
-
-.paginationBlock button {
-    height: 25px;
-    width: 25px;
-    font-size: 17px;
-    margin-top: 8px;
 }
