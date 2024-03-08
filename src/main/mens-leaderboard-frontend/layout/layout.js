@@ -8,6 +8,7 @@ import Link from "next/link";
 import {createMen} from "@/api/api";
 import {useRouter} from "next/router";
 import Image from "next/image";
+import {Analytics} from "@vercel/analytics/next";
 
 const name = "mens)) leaderboard"
 
@@ -70,6 +71,7 @@ export default function Layout({children}) {
         <main id="mainContentParent">
             <div id="mainContent">
                 {children}
+                <Analytics />
             </div>
         </main>
         <footer>

@@ -12,6 +12,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.12",
+    "@vercel/analytics": "^1.2.2",
     "country-flag-icons": "^1.5.9",
     "next": "14.1.1",
     "react": "^18",
