@@ -20,7 +20,7 @@ export default function Men({menData, position}) {
                             <Image
                                 src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${menData.countryCode}.svg`}
                                 alt={menData.countryCode}
-                                width={52} height={26}
+                                width={70} height={35}
                             />
                         </div>
                     ) : (
