@@ -1,5 +1,6 @@
 .men {
     padding: 0.5rem 2.5rem;
+    border-radius: 12px;
 }
 
 @media all and (max-device-width: 600px) {

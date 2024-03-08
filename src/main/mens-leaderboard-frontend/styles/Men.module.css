@@ -26,16 +26,20 @@
     margin-right: 10px;
 }
 
+.profile {
+    padding: 60px 32px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+}
+
 @media (prefers-color-scheme: dark) {
     .profile {
         background: #2d3844;
-        padding: 52px 20px;
     }
 }
 
 @media (prefers-color-scheme: light) {
     .profile {
         background: #FFFFFF;
-        padding: 52px 20px;
     }
 }
