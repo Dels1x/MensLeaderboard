@@ -1,13 +1,7 @@
 .profileParent {
     height: 100vh;
 
-    @media (prefers-color-scheme: dark) {
-        background-image: url('/dark-bg.jpg');
-    }
-    @media (prefers-color-scheme: light) {
-        background-image: url('/light-bg.jpg');
-    }
-
+    background-image: url('/dark-bg.jpg');
     background-repeat: repeat;
 }
 
