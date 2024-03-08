@@ -11,34 +11,36 @@ export default function Men({menData, position}) {
     const isFlag = hasFlag(menData.countryCode);
 
     return <Layout>
-        <section className={styles.profile}>
-            <div className={styles.mainData}>
-                #{position}
-                {isFlag ? (
-                    <div>
-                        <Image
-                            src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${menData.countryCode}.svg`}
-                            alt={menData.countryCode}
-                            width="70" height="35"
-                        />
-                    </div>
-                ) : (
-                    <div>
-                        {menData.countryCode}
-                    </div>
-                )}
+        <div className={styles.profileParent}>
+            <section className={styles.profile}>
+                <div className={styles.mainData}>
+                    #{position}
+                    {isFlag ? (
+                        <div>
+                            <Image
+                                src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${menData.countryCode}.svg`}
+                                alt={menData.countryCode}
+                                width={52} height={26}
+                            />
+                        </div>
+                    ) : (
+                        <div>
+                            {menData.countryCode}
+                        </div>
+                    )}
 
-                <div>
-                    <a target="_blank" href={`https://www.hltv.org/profile/${menData.id}/${menData.name}`}>
-                        {menData.name}
-                    </a>
+                    <div>
+                        <a target="_blank" href={`https://www.hltv.org/profile/${menData.id}/${menData.name}`}>
+                            {menData.name}
+                        </a>
+                    </div>
+                    <div>
+                        - {menData.commentsCount} comments
+                    </div>
                 </div>
-                <div>
-                    - {menData.commentsCount} comments
-                </div>
-            </div>
-            <div className={styles.secondaryData}>ID: {menData.id}, Signed up at: {menData.signedUp}</div>
-        </section>
+                <div className={styles.secondaryData}>ID: {menData.id}, Signed up at: {menData.signedUp}</div>
+            </section>
+        </div>
     </Layout>
 }
 

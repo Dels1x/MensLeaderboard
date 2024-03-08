@@ -1,3 +1,16 @@
+.profileParent {
+    height: 100vh;
+
+    @media (prefers-color-scheme: dark) {
+        background-image: url('/dark-bg.jpg');
+    }
+    @media (prefers-color-scheme: light) {
+        background-image: url('/light-bg.jpg');
+    }
+
+    background-repeat: repeat;
+}
+
 .mainData {
     display: flex;
     font-size: 2rem;
@@ -22,7 +35,7 @@
 
 @media (prefers-color-scheme: light) {
     .profile {
-        background: #2d3844;
+        background: #FFFFFF;
         padding: 52px 20px;
     }
 }

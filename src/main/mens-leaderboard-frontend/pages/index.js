@@ -39,7 +39,7 @@ export default function Home({allMens}) {
                                 {hasFlag(men.countryCode) ?
                                     <Image src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${men.countryCode}.svg`}
                                            alt={men.countryCode}
-                                           width={60} height={30} />
+                                           width={52} height={26} />
                                     : ""
                                 }
                                 <Link href={`/mens/${men.id}`}>{men.name}</Link> - {men.commentsCount}

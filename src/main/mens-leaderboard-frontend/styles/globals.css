@@ -1,12 +1,18 @@
 body {
-    background-image: url('/bg.jpg');
+    @media (prefers-color-scheme: dark) {
+        background-image: url('/dark-bg.jpg');
+    }
+    @media (prefers-color-scheme: light) {
+        background-image: url('/light-bg.jpg');
+    }
+
     background-repeat: repeat;
 }
 
 #mainContentParent {
     justify-content: center;
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 
 #mainContent {
@@ -14,7 +20,6 @@ body {
     margin-top: 65px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-
 }
 
 nav {
@@ -29,6 +34,29 @@ nav {
     height: 64px;
     padding-bottom: 0.6rem;
     padding-top: 0.6rem;
+}
+
+footer {
+    padding: 15px;
+    display: flex;
+
+    * {
+        margin-top: 10px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        a {
+            color: #C2C2C2;
+        }
+    }
+
+    #thanks {
+        width: 50%;
+    }
 }
 
 #leftSide {
@@ -53,11 +81,11 @@ a:hover {
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        background: #1B1F23;
+    nav {
+        background: #2d3844;
     }
 
-    nav {
+    footer {
         background: #2d3844;
     }
 
@@ -67,15 +95,11 @@ a:hover {
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        background: #E5E7EA;
-    }
-
-    main {
-        background: #E5E7EA;
-    }
-
     nav {
+        background: #FFFFFF;
+    }
+
+    footer {
         background: #FFFFFF;
     }
 }
@@ -113,10 +137,17 @@ a {
 /* [page].js and index.js */
 
 #paginationBlock {
-    background: #2d3844;
+    @media (prefers-color-scheme: dark) {
+        background: #2d3844;
+        border: #1B1F23 solid 1px;
+    }
+    @media (prefers-color-scheme: light) {
+        background: #FFFFFF;
+        border: #E5E7EA solid 1px;
+    }
+
     height: 90px;
     padding: 1.2rem 2.5rem;
-    border: #1B1F23 solid 1px;
 }
 
 #paginationBlock button {
