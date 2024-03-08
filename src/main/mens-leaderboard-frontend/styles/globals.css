@@ -136,7 +136,7 @@ a {
 
 /* [page].js and index.js */
 
-#paginationBlock {
+.paginationBlock {
     @media (prefers-color-scheme: dark) {
         background: #2d3844;
         border: #1B1F23 solid 1px;
@@ -147,10 +147,10 @@ a {
     }
 
     height: 90px;
-    padding: 1.2rem 2.5rem;
+    padding: 0.5rem 2.5rem;
 }
 
-#paginationBlock button {
+.paginationBlock button {
     height: 25px;
     width: 25px;
     font-size: 17px;

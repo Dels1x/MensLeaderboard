@@ -1,6 +1,6 @@
 'use strict'
 
-const size = 20;
+const size = 50;
 
 export function getSize() {
     return size;

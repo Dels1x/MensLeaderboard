@@ -25,7 +25,7 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
 
     return (
         <Layout>
-            <div id="paginationBlock">
+            <div className="paginationBlock">
                 <div><h2>leaderboard of mens))</h2></div>
                 <div>
                     <Button onClick={prevPage}>Prev</Button>
@@ -52,6 +52,12 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
             ) : (
                 <p>No data available</p>
             )}
+            <div className="paginationBlock">
+                <div>
+                    <Button onClick={prevPage}>Prev</Button>
+                    <Button onClick={nextPage}>Next</Button>
+                </div>
+            </div>
         </Layout>
     );
 }
