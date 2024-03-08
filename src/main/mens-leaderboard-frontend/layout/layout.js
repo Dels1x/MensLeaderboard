@@ -76,10 +76,10 @@ export default function Layout({children}) {
         </main>
         <footer>
             <div id="thanks">
-                Made by <a href="https://www.hltv.org/profile/1707809/delsix">delsix</a><br />
+                Made by <a target="_blank" href="https://www.hltv.org/profile/1707809/delsix">delsix</a><br />
                 Huge thanks to <a target="_blank" href="https://www.hltv.org/profile/1315925/radnikey">RADNIKEY</a> for his original 20k comments club.<br />
                 Here is the previous <a target="blank" href="https://web.archive.org/web/20220214181832/https://206mens.000webhostapp.com/">"mens)) leaderboard"</a> if anyone is curious.<br />
-                Here is the <a href="https://github.com/Dels1x/MensLeaderboard">source code</a> if anyone is interested<br />
+                Here is the <a target="_blank" href="https://github.com/Dels1x/MensLeaderboard">source code</a> if anyone is interested<br />
             </div>
             <div id="disclaimer">
                 DISCLAIMER: never chase the bigger comments count and write comments just for the sake of incrementing it. It never ends well.
