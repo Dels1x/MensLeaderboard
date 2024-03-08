@@ -90,11 +90,11 @@ a:hover {
 
 @media (prefers-color-scheme: light) {
     nav {
-        background: #FFFFFF;
+        background: #E5E7EA;
     }
 
     footer {
-        background: #FFFFFF;
+        background: #E5E7EA;
     }
 }
 
@@ -136,8 +136,8 @@ a {
         border: #1B1F23 solid 1px;
     }
     @media (prefers-color-scheme: light) {
-        background: #FFFFFF;
-        border: #E5E7EA solid 1px;
+        background: #E5E7EA;
+        border: #1B1F23 solid 1px;
     }
 
     height: 90px;

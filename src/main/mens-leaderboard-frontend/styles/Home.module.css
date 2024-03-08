@@ -18,7 +18,7 @@
 
 @media (prefers-color-scheme: light) {
     .men {
-        background: #FFFFFF;
-        border: #E5E7EA solid 1px;
+        background: #E5E7EA;
+        border: #1B1F23 solid 1px;
     }
 }
