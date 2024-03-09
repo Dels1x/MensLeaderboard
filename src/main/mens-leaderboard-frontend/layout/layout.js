@@ -20,7 +20,6 @@ export default function Layout({children}) {
 
     const submitMen = async () => {
         if (/^\d+$/.test(textFieldContent)) {
-            await createMen(textFieldContent);
             await router.push(`/mens/${textFieldContent}`);
         }
     };
