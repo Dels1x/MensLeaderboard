@@ -84,7 +84,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({params}) {
+export async function getServerSideProps({params}) {
     const allMens = await getAllMens(params.page);
 
     return {
