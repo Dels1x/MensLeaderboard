@@ -69,6 +69,6 @@ export async function getStaticProps() {
         props: {
             allMens
         },
-        revalidate: 60
+        revalidate: 32200
     }
 }

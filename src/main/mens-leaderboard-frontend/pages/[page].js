@@ -94,6 +94,6 @@ export async function getStaticProps({params}) {
             pagesAmount: await getPagesAmount(),
             startingIndex: parseInt(params.page) * getSize() + 1
         },
-        revalidate: 10
+        revalidate: 30
     }
 }
