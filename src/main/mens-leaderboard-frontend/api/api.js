@@ -1,9 +1,7 @@
 'use strict'
 
 const size = 50;
-const mainHttp = "https://wet-clocks-sell.loca.lt";
-const headers = new Headers();
-headers.append("bypass-tunnel-reminder", process.env.TUNNEL_PASSWORD);
+const mainHttp = "https://9db2f19d07d8a94cbb1e1e45bf9aeb45.loophole.site";
 
 export function getSize() {
     return size;
@@ -43,11 +41,7 @@ export async function createMen(id) { // also updates mens
 }
 
 async function executeGet(link) {
-    const res = await fetch(
-        link,
-        {
-            headers
-        });
+    const res = await fetch(link);
 
     if (!res.ok) {
         console.error("Response is not okay");
@@ -66,7 +60,6 @@ async function executePost(link) {
         link,
         {
             method: "POST",
-            headers
         });
 
     if (!res.ok) {

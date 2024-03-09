@@ -5,7 +5,6 @@ import React, {useState} from "react";
 import {Button, TextField} from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from "next/link";
-import {createMen} from "@/api/api";
 import {useRouter} from "next/router";
 import Image from "next/image";
 import {Analytics} from "@vercel/analytics/next";
