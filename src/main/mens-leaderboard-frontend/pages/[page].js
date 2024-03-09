@@ -84,7 +84,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getServerSideProps({params}) {
+export async function getStaticProps({params}) {
     const allMens = await getAllMens(params.page);
 
     return {
@@ -94,6 +94,6 @@ export async function getServerSideProps({params}) {
             pagesAmount: await getPagesAmount(),
             startingIndex: parseInt(params.page) * getSize() + 1
         },
-        revalidate: 60
+        revalidate: 10
     }
 }

@@ -53,7 +53,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getServerSideProps({params}) {
+export async function getStaticProps({params}) {
     const menData = await getMenData(params.id);
     const position = await getMenPosition(params.id)
 
@@ -68,5 +68,6 @@ export async function getServerSideProps({params}) {
             menData,
             position
         },
+        revalidate: 3600
     };
 }
