@@ -1,7 +1,7 @@
 'use strict'
 
 const size = 50;
-const mainHttp = "https://good-squids-dig.loca.lt";
+const mainHttp = "https://blue-mice-grab.loca.lt";
 const headers = new Headers();
 headers.append("bypass-tunnel-reminder", process.env.TUNNEL_PASSWORD);
 
