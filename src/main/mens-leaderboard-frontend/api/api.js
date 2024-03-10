@@ -1,7 +1,10 @@
 'use strict'
 
 const size = 50;
-const mainHttp = "https://9db2f19d07d8a94cbb1e1e45bf9aeb45.loophole.site";
+const mainHttp = "https://d584-195-93-212-239.ngrok-free.app";
+const headers = new Headers({
+    "ngrok-skip-browser-warning": "69420",
+});
 
 export function getSize() {
     return size;
@@ -41,7 +44,12 @@ export async function createMen(id) { // also updates mens
 }
 
 async function executeGet(link) {
-    const res = await fetch(link);
+    const res = await fetch(
+        link,
+        {
+            headers
+        }
+    );
 
     if (!res.ok) {
         console.error("Response is not okay");
@@ -60,10 +68,32 @@ async function executePost(link) {
         link,
         {
             method: "POST",
+            headers,
+            next: {
+                tags: ['collection']
+            }
         });
 
     if (!res.ok) {
         console.error("Response is not okay");
         return null;
+    }
+}
+
+export async function handler(req, res) {
+    // Check for secret to confirm this is a valid request
+    if (req.query.secret !== process.env.MY_SECRET_TOKEN) {
+        return res.status(401).json({ message: 'Invalid token' })
+    }
+
+    try {
+        // this should be the actual path not a rewritten path
+        // e.g. for "/blog/[slug]" this should be "/blog/post-1"
+        await res.revalidate('/post-1')
+        return res.json({ revalidated: true })
+    } catch (err) {
+        // If there was an error, Next.js will continue
+        // to show the last successfully generated page
+        return res.status(500).send('Error revalidating')
     }
 }
