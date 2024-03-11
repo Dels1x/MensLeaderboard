@@ -19,7 +19,7 @@ export async function getAllMens(page = 0) {
 export async function getMenPosition(id) {
     const link = `${mainHttp}/mens/pos?id=${id}`;
     const res = await executeGet(link);
-    return await res.json();
+    return res !== null ? await res.json() : null;
 }
 
 export async function getPagesAmount() {
@@ -41,12 +41,13 @@ export async function getMenData(id) {
     await createMen(id); // updating men
     const res = await executeGet(link);
 
-    return await res.json()
+    return res !== null ? await res.json() : null;
 }
 
 export async function createMen(id) { // also updates mens
     const link = `${mainHttp}/mens/new?id=${id}`
     await executePost(link);
+    console.log("i am here");
 }
 
 async function executeGet(link) {

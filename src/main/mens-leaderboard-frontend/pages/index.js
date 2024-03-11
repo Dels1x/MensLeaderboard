@@ -62,13 +62,12 @@ export default function Home({allMens}) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const allMens = await getAllMens();
 
     return {
         props: {
             allMens
         },
-        revalidate: 32200
     }
 }

@@ -1,7 +1,7 @@
 "use strict"
 'use client'
 
-import {getAllIds, getMenData, getMenPosition} from "@/api/api";
+import {getMenData, getMenPosition} from "@/api/api";
 import Layout from "@/layout/layout";
 import Image from "next/image";
 import styles from "@/styles/Men.module.css";
@@ -44,18 +44,12 @@ export default function Men({menData, position}) {
     </Layout>
 }
 
-export async function getStaticPaths() {
-    const paths = await getAllIds();
-
-    return {
-        paths,
-        fallback: 'blocking'
-    }
-}
-
-export async function getStaticProps({params}) {
+export async function getServerSideProps(context) {
+    const { params } = context;
     const menData = await getMenData(params.id);
     const position = await getMenPosition(params.id)
+
+    console.log(menData);
 
     if (!menData) {
         return {
@@ -68,6 +62,5 @@ export async function getStaticProps({params}) {
             menData,
             position
         },
-        revalidate: 32000
     };
 }

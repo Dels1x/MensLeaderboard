@@ -64,28 +64,16 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
     );
 }
 
-export async function getStaticPaths() {
-    const pagesAmount = await getPagesAmount();
-    let paths = [];
 
-    for (let i = 0; i < pagesAmount; i++) {
-        paths.push(
-            {
-                params: {
-                    page: i.toString()
-                }
-            }
-        )
-    }
-
-    return {
-        paths,
-        fallback: 'blocking'
-    }
-}
-
-export async function getStaticProps({params}) {
+export async function getServerSideProps(context) {
+    const { params } = context;
     const allMens = await getAllMens(params.page);
+
+    if (!allMens) {
+        return {
+            notFound: true,
+        };
+    }
 
     return {
         props: {
@@ -94,6 +82,5 @@ export async function getStaticProps({params}) {
             pagesAmount: await getPagesAmount(),
             startingIndex: parseInt(params.page) * getSize() + 1
         },
-        revalidate: 32000
     }
 }
