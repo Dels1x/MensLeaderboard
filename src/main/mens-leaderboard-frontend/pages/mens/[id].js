@@ -68,6 +68,6 @@ export async function getStaticProps({params}) {
             menData,
             position
         },
-        revalidate: 3600
+        revalidate: 32000
     };
 }

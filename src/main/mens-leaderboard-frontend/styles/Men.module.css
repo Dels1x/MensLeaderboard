@@ -16,10 +16,6 @@
     font-size: 1.2rem;
 }
 
-.mainData div {
-    margin-right: 10px;
-}
-
 .profile {
     padding: 60px 32px;
     border-bottom-left-radius: 36px;
@@ -35,5 +31,11 @@
 @media (prefers-color-scheme: light) {
     .profile {
         background: #E5E7EA;
+    }
+}
+
+@media all and (max-device-width: 600px) {
+    .mainData {
+        font-size: 1.4rem;
     }
 }

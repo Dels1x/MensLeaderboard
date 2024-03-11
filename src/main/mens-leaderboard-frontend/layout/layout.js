@@ -7,13 +7,18 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from "next/link";
 import {useRouter} from "next/router";
 import Image from "next/image";
-import {Analytics} from "@vercel/analytics/next";
+import {Roboto} from "next/font/google";
 
-const name = "mens)) leaderboard"
+const name = "mens)) leaderboard";
+const roboto = Roboto({
+    weight: "500",
+    style: "normal",
+    subsets: ["latin", "latin-ext"],
+});
 
 export default function Layout({children}) {
-    const router = useRouter();
     const [textFieldContent, setTextFieldContent] = useState('');
+    const router = useRouter();
     const prefersDarkTheme = useMediaQuery('(prefers-color-scheme: dark)');
     const textColor = prefersDarkTheme ? 'white' : 'black';
 
@@ -30,13 +35,10 @@ export default function Layout({children}) {
         }
     };
 
-    return <div>
+    return <div className={roboto.className}>
         <Head>
             <title>{name}</title>
             <link rel="icon" href="/logo.ico"/>
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"/>
             <meta
                 name="description"
                 content="The very bestest mens)) leaderboard"
@@ -69,7 +71,6 @@ export default function Layout({children}) {
         <main id="mainContentParent">
             <div id="mainContent">
                 {children}
-                <Analytics />
             </div>
         </main>
         <footer>
