@@ -27,7 +27,7 @@ public class ScrapingService {
 
             return buildMen(id,
                     getName(doc),
-                    getCountryName(tables),
+                    getCountryCode(tables),
                     getCommentsCount(tables),
                     getSignedUpDate(tables));
         } catch (IOException e) {
@@ -55,15 +55,16 @@ public class ScrapingService {
                 .build();
     }
 
-    public int scrapeComments(int id) throws NoIdException {
+    public Men updateMen(Men men) throws NoIdException {
         try {
-            Document doc = Jsoup.connect(String.format(MEN_URL, id)).userAgent(AGENT).get();
-            return getCommentsCount(doc.select("table"));
+            Document doc = Jsoup.connect(String.format(MEN_URL, men.getId())).userAgent(AGENT).get();
+            Elements tables = doc.select("table");
+            men.setCommentsCount(getCommentsCount(tables));
+            men.setCountryCode(getCountryCode(tables));
+
+            return men;
         } catch (IOException e) {
-            if (e instanceof org.jsoup.HttpStatusException httpStatusException) {
-                log.error("HTTP Status Code: {}", httpStatusException.getStatusCode());
-                log.error("Error Message: {}", httpStatusException.getMessage());
-            }
+            handleScrapingError(e);
 
             throw new NoIdException(e);
         }
@@ -80,7 +81,7 @@ public class ScrapingService {
         return Integer.parseInt(tables.get(1).select("tr").get(2).getElementsByClass("data").first().ownText());
     }
 
-    private static String getCountryName(Elements tables) {
+    private static String getCountryCode(Elements tables) {
         String imgSrc = tables.get(0).select("img").first().attr("src");
         return imgSrc.substring(imgSrc.length() - 6, imgSrc.length() - 4);
     }
