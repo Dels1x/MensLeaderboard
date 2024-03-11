@@ -67,6 +67,13 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
 
 export async function getServerSideProps(context) {
     const { params } = context;
+
+    if (!/^[0-9\b]+$/.test(params.page)) {
+        return {
+            notFound: true,
+        };
+    }
+
     const allMens = await getAllMens(params.page);
 
     if (!allMens) {

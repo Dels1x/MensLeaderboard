@@ -28,14 +28,6 @@ export async function getPagesAmount() {
     return await res.json();
 }
 
-export async function getAllIds() {
-    const link = `${mainHttp}/mens/ids`;
-
-    const res = await executeGet(link);
-    const ids = await res.json();
-    return ids.map(id => ({params: {"id": id.toString()}})); // map ids to the correct format and return
-}
-
 export async function getMenData(id) {
     const link = `${mainHttp}/mens/get?id=${id}`
     await createMen(id); // updating men
