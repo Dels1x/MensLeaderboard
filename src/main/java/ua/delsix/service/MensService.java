@@ -32,7 +32,7 @@ public class MensService {
 
             // check if at least 4 hours passed since last update, if so - update comments count
             if (Duration.between(men.getLastUpdatedAt(), Instant.now()).toHours() >= 4) {
-                updateCommentsCount(men, id);
+                updateMen(men);
             }
         } else {
             saveMen(id); // saving mens
@@ -45,12 +45,13 @@ public class MensService {
         log.info("new men {} has been created", men.getName());
     }
 
-    private void updateCommentsCount(Men men, int id) throws NoIdException {
-        men.setCommentsCount(scrapingService.scrapeComments(id));
-        men.setLastUpdatedAt(Instant.now());
-
-        menRepository.save(men);
-        log.info("{}'s comments count has been updated", men.getName());
+    private void updateMen(Men men) throws NoIdException {
+        Men newMen = scrapingService.updateMen(men);
+        menRepository.save(newMen);
+        log.info("{}'s comments count has been updated from {} to {}",
+                men.getName(),
+                men.getCommentsCount(),
+                newMen.getCommentsCount());
     }
 
     public List<Men> findAllMensByPageAndSize(Pageable pageable) {
