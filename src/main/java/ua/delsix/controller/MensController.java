@@ -24,11 +24,18 @@ public class MensController {
     @GetMapping("/all")
     public ResponseEntity<List<Men>> getMensByPage(@RequestParam(defaultValue = "0") int page,
                                    @RequestParam(defaultValue = "50") int size) {
-        return ResponseEntity.ok().body(mensService.findAllMensByPageAndSize(
+        return ResponseEntity.ok().body(mensService.findAllMens(
                 PageRequest.of(page,
                         size,
                         Sort.by("commentsCount").descending())));
     }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<Men>> getMensSortedByCPMByPage(@RequestParam(defaultValue = "0") int page,
+                                                   @RequestParam(defaultValue = "50") int size) {
+        return ResponseEntity.ok().body(mensService.findAllMensSortedByCPD());
+    }
+
 
     @GetMapping("/pos")
     public ResponseEntity<Integer> getPosition(@RequestParam int id) {

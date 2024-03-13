@@ -6,13 +6,12 @@
 }
 
 .mainData {
-    display: flex;
     font-size: 2rem;
 }
 
 .secondaryData {
     margin-left: 2px;
-    margin-top: 8px;
+    margin-top: 23px;
     font-size: 1.2rem;
 }
 

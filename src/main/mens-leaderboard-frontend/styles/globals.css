@@ -121,7 +121,7 @@ a {
     }
 }
 
-@media all and (max-device-width: 600px) {
+@media all and (max-device-width: 768px) {
     #mainContent {
         width: 100%;
         font-size: 0.7rem;

@@ -54,8 +54,12 @@ public class MensService {
                 newMen.getCommentsCount());
     }
 
-    public List<Men> findAllMensByPageAndSize(Pageable pageable) {
+    public List<Men> findAllMens(Pageable pageable) {
         return menRepository.findAllByOrderByCommentsCountDesc(pageable);
+    }
+
+    public List<Men> findAllMensSortedByCPD() {
+        return menRepository.findAllOrderByCommentsPerDayDesc();
     }
 
     public List<Long> findAllIds() {
