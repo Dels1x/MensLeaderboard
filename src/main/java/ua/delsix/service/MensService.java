@@ -58,10 +58,6 @@ public class MensService {
         return menRepository.findAllByOrderByCommentsCountDesc(pageable);
     }
 
-    public List<Men> findAllMensSortedByCPD() {
-        return menRepository.findAllOrderByCommentsPerDayDesc();
-    }
-
     public List<Long> findAllIds() {
         return menRepository.findAllIds();
     }
