@@ -1,0 +1,32 @@
+/* 404 */
+.body404 {
+    margin: 0 auto;
+    width: 530px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+
+    @media all and (max-device-width: 600px) {
+        .mainData {
+            width: 100vw;
+        }
+    }
+
+    padding: 59px;
+
+    @media (prefers-color-scheme: dark) {
+        background: #2d3844;
+        border: #1B1F23 solid 1px;
+    }
+    @media (prefers-color-scheme: light) {
+        background: #E5E7EA;
+        border: #1B1F23 solid 1px;
+    }
+}
+
+.text404 {
+    font-size: 8rem;
+}
+
+.desc {
+    font-size: 0.8rem;
+}
