@@ -54,14 +54,15 @@ export default function Men({menData, position, commentsPerDay}) {
 export async function getServerSideProps(context) {
     const { params } = context;
     const menData = await getMenData(params.id);
-    const position = await getMenPosition(params.id)
-    const commentsPerDay = getCommentsPerDay(menData.commentsCount, menData.signedUp);
 
     if (!menData) {
         return {
             notFound: true,
         };
     }
+
+    const position = await getMenPosition(params.id)
+    const commentsPerDay = getCommentsPerDay(menData.commentsCount, menData.signedUp);
 
     return {
         props: {
