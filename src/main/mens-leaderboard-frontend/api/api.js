@@ -13,7 +13,7 @@ export function getSize() {
 export async function getAllMens(page = 0) {
     const link = `${mainHttp}/mens/all?page=${page}&size=${size}`;
     const res = await executeGet(link);
-    return await res.json();
+    return res !== null ? await res.json() : null;
 }
 
 export async function getMenPosition(id) {
@@ -25,7 +25,7 @@ export async function getMenPosition(id) {
 export async function getPagesAmount() {
     const link = `${mainHttp}/mens/pagesAmount?size=${size}`;
     const res = await executeGet(link);
-    return await res.json();
+    return res !== null ? await res.json() : null;
 }
 
 export async function getMenData(id) {
@@ -39,7 +39,6 @@ export async function getMenData(id) {
 export async function createMen(id) { // also updates mens
     const link = `${mainHttp}/mens/new?id=${id}`
     await executePost(link);
-    console.log("i am here");
 }
 
 async function executeGet(link) {

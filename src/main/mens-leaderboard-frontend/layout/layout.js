@@ -81,7 +81,9 @@ export default function Layout({children}) {
                 Here is the <a target="_blank" href="https://github.com/Dels1x/MensLeaderboard">source code</a> if anyone is interested<br />
             </div>
             <div id="disclaimer">
-                DISCLAIMER: never chase the bigger comments count and write comments just for the sake of incrementing it. It never ends well.
+                DISCLAIMER: never chase the bigger comments count and write comments just for the sake of incrementing it.
+                Needless to say, that this site is made only for the sake of fun and not actual competition <br /><br />
+                Sometimes the site might not be up. The reason is because the API is deployed on my laptop locally in Ukraine, and I might not always have electricity
             </div>
         </footer>
     </div>
