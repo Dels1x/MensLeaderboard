@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="reinstantiated ngrok reverse proxy" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="JUnit5 Test Class" />
+        <option value="com.haulmont.jpb.JpaRepository" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2d3NhIkxmUum101rKIrFCrAhQby" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;Spring Boot.App.executor&quot;: &quot;Run&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;4e07cd889a628b7587830774d0785284&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;PostgreSQL&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ua.delsix.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.App">
+    <configuration name="ScrapingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MensLeaderboard" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.delsix.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.delsix.service" />
+      <option name="MAIN_CLASS_NAME" value="ua.delsix.service.ScrapingServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScrapingServiceTest.scrapeMen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MensLeaderboard" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.delsix.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.delsix.service" />
+      <option name="MAIN_CLASS_NAME" value="ua.delsix.service.ScrapingServiceTest" />
+      <option name="METHOD_NAME" value="scrapeMen" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="MensLeaderboard" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ua.delsix.App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.delsix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App" />
+        <item itemvalue="JUnit.ScrapingServiceTest.scrapeMen" />
+        <item itemvalue="JUnit.ScrapingServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="" />
+      <created>1709232921775</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709232921775</updated>
+      <workItem from="1709232923031" duration="1834000" />
+      <workItem from="1709239542659" duration="3858000" />
+      <workItem from="1709309278914" duration="2528000" />
+      <workItem from="1709326437808" duration="2465000" />
+      <workItem from="1709380221654" duration="478000" />
+      <workItem from="1709381518528" duration="25000" />
+      <workItem from="1709381724188" duration="9079000" />
+      <workItem from="1709395842414" duration="4404000" />
+      <workItem from="1709400444118" duration="2349000" />
+      <workItem from="1709408080532" duration="3875000" />
+      <workItem from="1709412215768" duration="680000" />
+      <workItem from="1709468771255" duration="6468000" />
+      <workItem from="1709486979064" duration="1069000" />
+      <workItem from="1709490213532" duration="61000" />
+      <workItem from="1709493832855" duration="1274000" />
+      <workItem from="1709543715023" duration="6534000" />
+      <workItem from="1709561446248" duration="1316000" />
+      <workItem from="1709573407118" duration="4585000" />
+      <workItem from="1709640139971" duration="6928000" />
+      <workItem from="1709670396011" duration="3532000" />
+      <workItem from="1709676774838" duration="226000" />
+      <workItem from="1709724245086" duration="6502000" />
+      <workItem from="1709747782082" duration="1852000" />
+      <workItem from="1709807299680" duration="8377000" />
+      <workItem from="1709833594789" duration="1045000" />
+      <workItem from="1709891474860" duration="813000" />
+      <workItem from="1709893389043" duration="3262000" />
+      <workItem from="1709909682215" duration="1900000" />
+      <workItem from="1709912251096" duration="1041000" />
+      <workItem from="1709917406797" duration="315000" />
+      <workItem from="1709917952871" duration="690000" />
+      <workItem from="1709978887340" duration="631000" />
+      <workItem from="1709982724796" duration="1879000" />
+      <workItem from="1709998786663" duration="5692000" />
+      <workItem from="1710005797092" duration="23000" />
+      <workItem from="1710073718763" duration="1725000" />
+      <workItem from="1710088271699" duration="1299000" />
+      <workItem from="1710160687388" duration="4392000" />
+      <workItem from="1710179522642" duration="2008000" />
+      <workItem from="1710256079585" duration="1315000" />
+      <workItem from="1710264127609" duration="4456000" />
+      <workItem from="1710281062524" duration="1878000" />
+      <workItem from="1710351244343" duration="2048000" />
+      <workItem from="1710435028088" duration="135000" />
+      <workItem from="1710436287179" duration="786000" />
+      <workItem from="1710496386697" duration="2921000" />
+      <workItem from="1710590781875" duration="1815000" />
+      <workItem from="1711130563619" duration="176000" />
+      <workItem from="1711185649398" duration="571000" />
+      <workItem from="1711190287367" duration="587000" />
+      <workItem from="1711307423073" duration="657000" />
+      <workItem from="1711313032194" duration="608000" />
+      <workItem from="1711367476122" duration="625000" />
+      <workItem from="1711624394077" duration="1304000" />
+      <workItem from="1713094352391" duration="1051000" />
+      <workItem from="1713114770775" duration="2070000" />
+      <workItem from="1713117747372" duration="8000" />
+      <workItem from="1713122147689" duration="1216000" />
+      <workItem from="1713178020300" duration="692000" />
+      <workItem from="1713540881640" duration="80000" />
+      <workItem from="1713541127294" duration="612000" />
+      <workItem from="1713547327349" duration="117000" />
+      <workItem from="1713550508205" duration="153000" />
+    </task>
+    <task id="LOCAL-00002" summary="RESTful API implemented">
+      <created>1709474753565</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709474753565</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updating comments count instead of overriding a whole entity implemented">
+      <created>1709546615920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709546615920</updated>
+    </task>
+    <task id="LOCAL-00004" summary="basic client functionality implemented: leaderboard (no pagination yet), user profiles, create user by id">
+      <created>1709662196877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709662196877</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added basic logging on the server-side, pagination is in works">
+      <created>1709676523252</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709676523252</updated>
+    </task>
+    <task id="LOCAL-00006" summary="pagination functionality implemented">
+      <created>1709728361866</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709728361866</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Flags implemented; If user doesn't exist, app displays 404 page now">
+      <created>1709741344679</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709741344679</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added: background, favicon.ico. textfield now accepts only digits">
+      <created>1709813744284</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709813744284</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Position in mens profiles implemented">
+      <created>1709815222798</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709815222798</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Roboto font added">
+      <created>1709815455432</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709815455432</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Mens profile styles revised">
+      <created>1709816144583</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709816144583</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ready for deployment">
+      <created>1709831412852</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709831412852</updated>
+    </task>
+    <task id="LOCAL-00013" summary="some small adjustments for deployment">
+      <created>1709832412174</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709832412174</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fixed ngrok displaying a warning page, instead of the actual API">
+      <created>1709833747199</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709833747199</updated>
+    </task>
+    <task id="LOCAL-00015" summary="changed res.text() to res.json(), so that the application can work">
+      <created>1709834026750</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709834026750</updated>
+    </task>
+    <task id="LOCAL-00016" summary="changed res.text() to res.json(), so that the application can work">
+      <created>1709834044344</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709834044344</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[page].js' fallback changed from true to blocking, so that new pages can be rendered without redeploying">
+      <created>1709892512300</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709892512300</updated>
+    </task>
+    <task id="LOCAL-00018" summary="made flags smaller, added footer, added light bg">
+      <created>1709895423165</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1709895423165</updated>
+    </task>
+    <task id="LOCAL-00019" summary="made [id] flags bigger and [page] flags smaller">
+      <created>1709895928521</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709895928521</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added Vercel's analytics">
+      <created>1709897940209</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1709897940209</updated>
+    </task>
+    <task id="LOCAL-00021" summary="changed amount of users per page from 20 to 50">
+      <created>1709910279915</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1709910279915</updated>
+    </task>
+    <task id="LOCAL-00022" summary="round borders implemented">
+      <created>1709910862735</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1709910862735</updated>
+    </task>
+    <task id="LOCAL-00023" summary="changed target to _blank on all links in the footer">
+      <created>1709910985917</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1709910985917</updated>
+    </task>
+    <task id="LOCAL-00024" summary="left only dark-bg, because it works better with both themes">
+      <created>1709912352387</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1709912352387</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Made light colors less bright">
+      <created>1709912672095</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1709912672095</updated>
+    </task>
+    <task id="LOCAL-00026" summary="changed #mainContent margin-top from 65px to 64px">
+      <created>1709914206333</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1709914206333</updated>
+    </task>
+    <task id="LOCAL-00027" summary="made page's height to be at least 100 viewport height, so that footer doesn't appear in the middle of a page, on a last page when it has a small amount of users">
+      <created>1709917641848</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709917641848</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added page number into pagination block">
+      <created>1709918626665</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1709918626665</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Changed getStaticProps to getServerSideProps, so that data gets updated at request time">
+      <created>1709982896151</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709982896151</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Went back to getStaticProps, but implemented ISR via revalidating">
+      <created>1709984051815</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709984051815</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Increased revalidate durations, to not overload the reverse proxy request limits">
+      <created>1709999036168</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709999036168</updated>
+    </task>
+    <task id="LOCAL-00032" summary="switched reverse proxy">
+      <created>1710002504589</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1710002504589</updated>
+    </task>
+    <task id="LOCAL-00033" summary="switched reverse proxy">
+      <created>1710002976332</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1710002976332</updated>
+    </task>
+    <task id="LOCAL-00034" summary="switched reverse proxy">
+      <created>1710003215597</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1710003215597</updated>
+    </task>
+    <task id="LOCAL-00035" summary="switched reverse proxy">
+      <created>1710003939994</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1710003939994</updated>
+    </task>
+    <task id="LOCAL-00036" summary="switched reverse proxy">
+      <created>1710003989367</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1710003989367</updated>
+    </task>
+    <task id="LOCAL-00037" summary="switched reverse proxy from localtunnel to loophole">
+      <created>1710004762358</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1710004762358</updated>
+    </task>
+    <task id="LOCAL-00038" summary="switched reverse proxy back from loophole to ngrok (help me)">
+      <created>1710089025597</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1710089025597</updated>
+    </task>
+    <task id="LOCAL-00039" summary="decreased profiles font-size for mobile devices">
+      <created>1710169123709</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1710169123709</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Switched from SSG to SSR">
+      <created>1710172336758</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1710172336758</updated>
+    </task>
+    <task id="LOCAL-00041" summary="got rid of getAllIds function since it's not used anymore">
+      <created>1710172846666</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1710172846666</updated>
+    </task>
+    <task id="LOCAL-00042" summary="updateMen() now updated user flags too">
+      <created>1710180887940</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1710180887940</updated>
+    </task>
+    <task id="LOCAL-00043" summary="updateMen() now updated user flags too">
+      <created>1710180910093</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710180910093</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Readme added">
+      <created>1710267928943</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1710267928943</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added comments per day data in profiles">
+      <created>1710354501435</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1710354501435</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Got rid of CPM leaderboard">
+      <created>1710436503987</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1710436503987</updated>
+    </task>
+    <task id="LOCAL-00047" summary="site displays 404 page now when non-available user is prompted instead of 500 internal server error">
+      <created>1710496852834</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1710496852834</updated>
+    </task>
+    <task id="LOCAL-00048" summary="added custom 404">
+      <created>1710499260193</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1710499260193</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Added info to footer. Fixed api.js, in case if res is null">
+      <created>1711130712826</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1711130712826</updated>
+    </task>
+    <task id="LOCAL-00050" summary="reinstantiated ngrok reverse proxy">
+      <created>1711307776505</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1711307776505</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="round borders implemented" />
+    <MESSAGE value="changed target to _blank on all links in the footer" />
+    <MESSAGE value="left only dark-bg, because it works better with both themes" />
+    <MESSAGE value="Made light colors less bright" />
+    <MESSAGE value="changed #mainContent margin-top from 65px to 64px" />
+    <MESSAGE value="made page's height to be at least 100 viewport height, so that footer doesn't appear in the middle of a page, on a last page when it has a small amount of users" />
+    <MESSAGE value="Added page number into pagination block" />
+    <MESSAGE value="Changed getStaticProps to getServerSideProps, so that data gets updated at request time" />
+    <MESSAGE value="Went back to getStaticProps, but implemented ISR via revalidating" />
+    <MESSAGE value="Increased revalidate durations, to not overload the reverse proxy request limits" />
+    <MESSAGE value="switched reverse proxy" />
+    <MESSAGE value="switched reverse proxy from localtunnel to loophole" />
+    <MESSAGE value="switched reverse proxy back from loophole to ngrok (help me)" />
+    <MESSAGE value="decreased profiles font-size for mobile devices" />
+    <MESSAGE value="Switched from SSG to SSR" />
+    <MESSAGE value="got rid of getAllIds function since it's not used anymore" />
+    <MESSAGE value="updateMen() now updated user flags too" />
+    <MESSAGE value="Readme added" />
+    <MESSAGE value="Added comments per date data in profiles" />
+    <MESSAGE value="Added comments per day data in profiles" />
+    <MESSAGE value="Got rid of CPM leaderboard" />
+    <MESSAGE value="site displays 404 page now when non-available user is prompted instead of 500 internal server error" />
+    <MESSAGE value="added custom 404" />
+    <MESSAGE value="Added info to footer. Fixed api.js, in case if res is null" />
+    <MESSAGE value="reinstantiated ngrok reverse proxy" />
+    <option name="LAST_COMMIT_MESSAGE" value="reinstantiated ngrok reverse proxy" />
+  </component>
+</project>
