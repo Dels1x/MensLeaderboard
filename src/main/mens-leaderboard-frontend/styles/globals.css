@@ -155,5 +155,14 @@ a {
 
     height: 90px;
     padding: 0.5rem 2.5rem;
-    border-radius: 12px;
+    border-top: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.bottomPaginationBlock {
+    padding: 0 2.5rem;
+    height: 60px;
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
 }

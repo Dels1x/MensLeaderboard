@@ -51,7 +51,7 @@ export default function Home({allMens}) {
             ) : (
                 <p>No data available</p>
             )}
-            <div className="paginationBlock">
+            <div className="paginationBlock bottomPaginationBlock">
                 <div className="pagination">
                     <Button>Prev</Button>&nbsp;
                     <div className={styles.currentPage}>1</div>&nbsp;
