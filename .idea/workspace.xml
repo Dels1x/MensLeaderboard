@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="reinstantiated ngrok reverse proxy" />
+    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="improved paginationBlocks' design">
+      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/[page].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/[page].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/styles/globals.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,6 +220,7 @@
       <workItem from="1713541127294" duration="612000" />
       <workItem from="1713547327349" duration="117000" />
       <workItem from="1713550508205" duration="153000" />
+      <workItem from="1713874638260" duration="368000" />
     </task>
     <task id="LOCAL-00002" summary="RESTful API implemented">
       <created>1709474753565</created>
@@ -560,7 +565,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711307776505</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +583,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="round borders implemented" />
     <MESSAGE value="changed target to _blank on all links in the footer" />
     <MESSAGE value="left only dark-bg, because it works better with both themes" />
     <MESSAGE value="Made light colors less bright" />
@@ -603,6 +607,7 @@
     <MESSAGE value="added custom 404" />
     <MESSAGE value="Added info to footer. Fixed api.js, in case if res is null" />
     <MESSAGE value="reinstantiated ngrok reverse proxy" />
-    <option name="LAST_COMMIT_MESSAGE" value="reinstantiated ngrok reverse proxy" />
+    <MESSAGE value="improved paginationBlocks' design" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved paginationBlocks' design" />
   </component>
 </project>
