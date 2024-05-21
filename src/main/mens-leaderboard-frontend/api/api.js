@@ -1,7 +1,7 @@
 'use strict'
 
 const size = 50;
-const mainHttp = "https://1257-195-93-212-157.ngrok-free.app";
+const mainHttp = "https://6f2e-195-93-212-220.ngrok-free.app";
 const headers = new Headers({
     "ngrok-skip-browser-warning": "69420",
 });

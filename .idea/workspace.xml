@@ -4,29 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="reinstantiated ngrok reverse proxy">
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/.idea/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/next.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/pages/_app.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/pages/_document.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/pages/api/hello.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/pages/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/postcss.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/tailwind.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/untitled/tsconfig.json" beforeDir="false" />
+    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="deleted redundant project (git error)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,6 +218,11 @@
       <workItem from="1713541127294" duration="612000" />
       <workItem from="1713547327349" duration="117000" />
       <workItem from="1713550508205" duration="153000" />
+      <workItem from="1713887029720" duration="597000" />
+      <workItem from="1713961005002" duration="133000" />
+      <workItem from="1714159931476" duration="593000" />
+      <workItem from="1714164479205" duration="39000" />
+      <workItem from="1714227526827" duration="1203000" />
     </task>
     <task id="LOCAL-00002" summary="RESTful API implemented">
       <created>1709474753565</created>
@@ -583,7 +567,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711307776505</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="round borders implemented" />
     <MESSAGE value="changed target to _blank on all links in the footer" />
     <MESSAGE value="left only dark-bg, because it works better with both themes" />
     <MESSAGE value="Made light colors less bright" />
@@ -626,6 +609,7 @@
     <MESSAGE value="added custom 404" />
     <MESSAGE value="Added info to footer. Fixed api.js, in case if res is null" />
     <MESSAGE value="reinstantiated ngrok reverse proxy" />
-    <option name="LAST_COMMIT_MESSAGE" value="reinstantiated ngrok reverse proxy" />
+    <MESSAGE value="deleted redundant project (git error)" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted redundant project (git error)" />
   </component>
 </project>
