@@ -30,6 +30,17 @@ public class MensController {
                         Sort.by("commentsCount").descending())));
     }
 
+    @GetMapping("/country")
+    public ResponseEntity<List<Men>> getMensByCountryByPage(@RequestParam String code,
+                                                            @RequestParam(defaultValue = "0") int page,
+                                                            @RequestParam(defaultValue = "50") int size) {
+        return ResponseEntity.ok().body(mensService.findMensByCountry(
+                code,
+                PageRequest.of(page,
+                        size,
+                        Sort.by("commentsCount").descending())));
+    }
+
     @GetMapping("/pos")
     public ResponseEntity<Integer> getPosition(@RequestParam int id) {
         return ResponseEntity.ok().body(mensService.findPosition(id));

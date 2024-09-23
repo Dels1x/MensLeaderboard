@@ -1,13 +1,13 @@
-"use strict"
+'use strict'
 
-import Layout from "@/layout/layout";
-import styles from "../styles/Home.module.css";
-import {getAllMens, getPagesAmount, getSize} from "@/api/api";
-import Link from "next/link";
-import {Button} from "@mui/material";
+import {getMensByCountry, getPagesAmount, getSize} from "@/api/api";
 import {useRouter} from "next/router";
-import Image from "next/image";
+import Layout from "@/layout/layout";
+import {Button} from "@mui/material";
+import styles from "@/styles/Home.module.css";
 import {hasFlag} from "country-flag-icons";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home({allMens, currentPage, pagesAmount, startingIndex}) {
     const router = useRouter();
@@ -64,9 +64,10 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
     );
 }
 
-
 export async function getServerSideProps(context) {
     const { params } = context;
+    console.log(params.country);
+    console.log(params.page);
 
     if (!/^[0-9]+$/.test(params.page)) {
         return {
@@ -74,7 +75,7 @@ export async function getServerSideProps(context) {
         };
     }
 
-    const allMens = await getAllMens(params.page);
+    const allMens = await getMensByCountry(params.page, params.country);
 
     if (!allMens) {
         return {

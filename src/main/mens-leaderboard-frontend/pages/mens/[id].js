@@ -7,6 +7,7 @@ import Image from "next/image";
 import styles from "@/styles/Men.module.css";
 import {hasFlag} from "country-flag-icons";
 import {getCommentsPerDay} from "@/lib/logic";
+import Link from "next/link";
 
 export default function Men({menData, position, commentsPerDay}) {
     const isFlag = hasFlag(menData.countryCode);
@@ -18,11 +19,13 @@ export default function Men({menData, position, commentsPerDay}) {
                     #{position}
                     {isFlag ? (
                         <span>
-                            <Image
-                                src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${menData.countryCode}.svg`}
-                                alt={menData.countryCode}
-                                width={70} height={35}
-                            />
+                            <Link href={`../countries/${menData.countryCode}/0`} >
+                                <Image
+                                    src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${menData.countryCode}.svg`}
+                                    alt={menData.countryCode}
+                                    width={70} height={35}
+                                />
+                            </Link>
                         </span>
                     ) : (
                         <span>

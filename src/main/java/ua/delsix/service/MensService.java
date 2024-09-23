@@ -1,6 +1,7 @@
 package ua.delsix.service;
 
 import lombok.extern.log4j.Log4j2;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ua.delsix.exception.NoIdException;
@@ -15,11 +16,11 @@ import java.util.Optional;
 @Service
 @Log4j2
 public class MensService {
-    private final ScrapingService scrapingService;
+    private final QueueService queueService;
     private final MenRepository menRepository;
 
-    public MensService(ScrapingService scrapingService, MenRepository menRepository) {
-        this.scrapingService = scrapingService;
+    public MensService(QueueService queueService, MenRepository menRepository) {
+        this.queueService = queueService;
         this.menRepository = menRepository;
     }
 
@@ -40,13 +41,13 @@ public class MensService {
     }
 
     private void saveMen(int id) throws NoIdException {
-        Men men = scrapingService.scrapeMen(id);
+        Men men = queueService.scrapeMen(id);
         menRepository.save(men);
         log.info("new men {} has been created", men.getName());
     }
 
     private void updateMen(Men men) throws NoIdException {
-        Men newMen = scrapingService.updateMen(men);
+        Men newMen = queueService.updateMen(men);
         menRepository.save(newMen);
         log.info("{}'s comments count has been updated from {} to {}",
                 men.getName(),
@@ -56,6 +57,11 @@ public class MensService {
 
     public List<Men> findAllMens(Pageable pageable) {
         return menRepository.findAllByOrderByCommentsCountDesc(pageable);
+    }
+
+    public List<Men> findMensByCountry(String code, PageRequest pageable) {
+        log.info("Getting mens for country {}. Pageable: {}", code, pageable.toString());
+        return menRepository.findAllByCountryCodeOrderByCommentsCountDesc(code, pageable);
     }
 
     public List<Long> findAllIds() {

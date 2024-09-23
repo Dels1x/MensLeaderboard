@@ -1,7 +1,7 @@
 'use strict'
 
 const size = 50;
-const mainHttp = "https://6f2e-195-93-212-220.ngrok-free.app";
+const mainHttp = "http://localhost:6206"
 const headers = new Headers({
     "ngrok-skip-browser-warning": "69420",
 });
@@ -15,6 +15,14 @@ export async function getAllMens(page = 0) {
     const res = await executeGet(link);
     return res !== null ? await res.json() : null;
 }
+
+export async function getMensByCountry(page = 0, country) {
+    const link = `${mainHttp}/mens/country?code=${country}&page=${page}&size=${size}`;
+    console.log("link: " + link);
+    const res = await executeGet(link);
+    return res !== null ? await res.json() : null;
+}
+
 
 export async function getMenPosition(id) {
     const link = `${mainHttp}/mens/pos?id=${id}`;
