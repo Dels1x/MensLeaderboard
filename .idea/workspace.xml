@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="deleted redundant project (git error)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/delsix/service/QueueService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/countries/[country]/[page].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4321438b-d4fc-4deb-b4a3-b4fc070b9c1d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4321438b-d4fc-4deb-b4a3-b4fc070b9c1d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_3_2024_4_06_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_3_2024_4_06_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2024_12_04_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2024_12_04_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="added leaderboards by countries (flags)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/delsix/controller/MensController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/delsix/controller/MensController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/delsix/jpa/repo/MenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/delsix/jpa/repo/MenRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/delsix/service/MensService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/delsix/service/MensService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/[page].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/[page].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/mens/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/pages/mens/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/delsix/controller/MensController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/delsix/controller/MensController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/delsix/jpa/repo/MenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/delsix/jpa/repo/MenRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/delsix/service/MensService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/delsix/service/MensService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +57,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.MensLeaderboard [org.apache.maven.plugins:maven-jar-plugin:3.3.0:jar].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -268,7 +253,8 @@
       <workItem from="1726912538193" duration="143000" />
       <workItem from="1727005567483" duration="1899000" />
       <workItem from="1727013038073" duration="4296000" />
-      <workItem from="1727107629507" duration="4557000" />
+      <workItem from="1727107629507" duration="5454000" />
+      <workItem from="1727119591875" duration="1666000" />
     </task>
     <task id="LOCAL-00002" summary="RESTful API implemented">
       <created>1709474753565</created>
@@ -613,7 +599,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711307776505</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed target to _blank on all links in the footer" />
     <MESSAGE value="left only dark-bg, because it works better with both themes" />
     <MESSAGE value="Made light colors less bright" />
     <MESSAGE value="changed #mainContent margin-top from 65px to 64px" />
@@ -656,6 +641,7 @@
     <MESSAGE value="Added info to footer. Fixed api.js, in case if res is null" />
     <MESSAGE value="reinstantiated ngrok reverse proxy" />
     <MESSAGE value="deleted redundant project (git error)" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted redundant project (git error)" />
+    <MESSAGE value="added leaderboards by countries (flags)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added leaderboards by countries (flags)" />
   </component>
 </project>

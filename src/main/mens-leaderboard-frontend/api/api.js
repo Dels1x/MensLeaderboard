@@ -1,7 +1,7 @@
 'use strict'
 
 const size = 50;
-const mainHttp = "http://localhost:6206"
+const mainHttp = "https://da25-195-93-212-251.ngrok-free.app"
 const headers = new Headers({
     "ngrok-skip-browser-warning": "69420",
 });
