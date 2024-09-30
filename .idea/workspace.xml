@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="added leaderboards by countries (flags)">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_3_2024_4_06_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_3_2024_4_06_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2024_12_04_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2024_12_04_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="Extracted MensList into its own React component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,6 +256,8 @@
       <workItem from="1727013038073" duration="4296000" />
       <workItem from="1727107629507" duration="5454000" />
       <workItem from="1727119591875" duration="1666000" />
+      <workItem from="1727599852169" duration="718000" />
+      <workItem from="1727694253571" duration="597000" />
     </task>
     <task id="LOCAL-00002" summary="RESTful API implemented">
       <created>1709474753565</created>
@@ -602,7 +602,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711307776505</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="left only dark-bg, because it works better with both themes" />
     <MESSAGE value="Made light colors less bright" />
     <MESSAGE value="changed #mainContent margin-top from 65px to 64px" />
     <MESSAGE value="made page's height to be at least 100 viewport height, so that footer doesn't appear in the middle of a page, on a last page when it has a small amount of users" />
@@ -645,6 +644,7 @@
     <MESSAGE value="reinstantiated ngrok reverse proxy" />
     <MESSAGE value="deleted redundant project (git error)" />
     <MESSAGE value="added leaderboards by countries (flags)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added leaderboards by countries (flags)" />
+    <MESSAGE value="Extracted MensList into its own React component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extracted MensList into its own React component" />
   </component>
 </project>

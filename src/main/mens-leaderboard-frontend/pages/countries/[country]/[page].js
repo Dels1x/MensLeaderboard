@@ -6,8 +6,10 @@ import Layout from "@/layout/layout";
 import {Button} from "@mui/material";
 import styles from "@/styles/Home.module.css";
 import MensList from "@/components/MensList";
+import Image from "next/image";
 
-export default function Home({allMens, currentPage, pagesAmount, startingIndex}) {
+export default function Home({allMens, currentPage, pagesAmount, startingIndex, country}) {
+    const {getName} = require('country-list')
     const router = useRouter();
 
     const prevPage = async () => {
@@ -24,7 +26,12 @@ export default function Home({allMens, currentPage, pagesAmount, startingIndex})
     return (
         <Layout>
             <div className="paginationBlock">
-                <div><h2>leaderboard of mens))</h2></div>
+                <div><h2>leaderboard of mens)) for
+                    <Image
+                    src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${country}.svg`}
+                    alt={country}
+                    width={56} height={28}/>
+                    {getName(country)}</h2></div>
                 <div className="pagination">
                     <Button onClick={prevPage}>Prev</Button>&nbsp;
                     <div className={styles.currentPage}>{parseInt(currentPage) + 1}</div>&nbsp;
@@ -67,7 +74,8 @@ export async function getServerSideProps(context) {
             allMens,
             currentPage: params.page.toString(),
             pagesAmount: await getPagesAmount(),
-            startingIndex: parseInt(params.page) * getSize() + 1
+            startingIndex: parseInt(params.page) * getSize() + 1,
+            country: params.country
         },
     }
 }

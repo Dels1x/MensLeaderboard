@@ -7,7 +7,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from "next/link";
 import {useRouter} from "next/router";
 import Image from "next/image";
-import {Roboto} from "next/font/google";
+import {Roboto} from "next/font/google"
+import styles from "../styles/Layout.module.css";
 
 const name = "mens)) leaderboard";
 const roboto = Roboto({
@@ -47,7 +48,7 @@ export default function Layout({children}) {
         <nav>
             <div id="leftSide">
                 <div>
-                    <Link href="/">
+                    <Link href="/" className={styles.mainImage}>
                         <Image
                             src="/logo.png"
                             width="50"

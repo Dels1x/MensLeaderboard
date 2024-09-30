@@ -121,7 +121,7 @@ a {
     }
 }
 
-@media all and (max-device-width: 768px) {
+@media (max-device-width: 768px) {
     #mainContent {
         width: 100%;
         font-size: 0.7rem;
@@ -153,11 +153,15 @@ a {
         font-size: 20px;
     }
 
-    height: 90px;
+    height: 120px;
     padding: 0.5rem 2.5rem;
     border-top: 0;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+
+    @media (max-device-width: 768px) {
+        font-size: 10px;
+    }
 }
 
 .bottomPaginationBlock {
