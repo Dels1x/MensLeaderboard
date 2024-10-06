@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="Extracted MensList into its own React component">
+    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="Improved pagination block of /[country]/[page] by adding flags and country names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,6 +258,8 @@
       <workItem from="1727119591875" duration="1666000" />
       <workItem from="1727599852169" duration="718000" />
       <workItem from="1727694253571" duration="597000" />
+      <workItem from="1727704283531" duration="579000" />
+      <workItem from="1727711811152" duration="1600000" />
     </task>
     <task id="LOCAL-00002" summary="RESTful API implemented">
       <created>1709474753565</created>
@@ -602,7 +604,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711307776505</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,7 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made light colors less bright" />
     <MESSAGE value="changed #mainContent margin-top from 65px to 64px" />
     <MESSAGE value="made page's height to be at least 100 viewport height, so that footer doesn't appear in the middle of a page, on a last page when it has a small amount of users" />
     <MESSAGE value="Added page number into pagination block" />
@@ -645,6 +646,7 @@
     <MESSAGE value="deleted redundant project (git error)" />
     <MESSAGE value="added leaderboards by countries (flags)" />
     <MESSAGE value="Extracted MensList into its own React component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extracted MensList into its own React component" />
+    <MESSAGE value="Improved pagination block of /[country]/[page] by adding flags and country names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved pagination block of /[country]/[page] by adding flags and country names" />
   </component>
 </project>
