@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="updated reverse proxy url">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mens-leaderboard-frontend/api/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +262,8 @@
       <workItem from="1727711811152" duration="1600000" />
       <workItem from="1728212069701" duration="1007000" />
       <workItem from="1728232825909" duration="431000" />
-      <workItem from="1728816232143" duration="298000" />
+      <workItem from="1728816232143" duration="313000" />
+      <workItem from="1728896273472" duration="481000" />
     </task>
     <task id="LOCAL-00002" summary="RESTful API implemented">
       <created>1709474753565</created>
@@ -608,7 +608,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711307776505</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
