@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="updated reverse proxy url">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9bf4f1ad-8602-4177-925d-589a275938af" name="Changes" comment="updated reverse proxy url" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,6 +263,7 @@
       <workItem from="1728816232143" duration="313000" />
       <workItem from="1728896273472" duration="581000" />
       <workItem from="1728983117083" duration="36000" />
+      <workItem from="1729008573699" duration="1159000" />
     </task>
     <task id="LOCAL-00002" summary="RESTful API implemented">
       <created>1709474753565</created>
@@ -609,7 +608,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711307776505</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
